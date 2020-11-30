@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hattrick</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        body{
+            font-size: small;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Hattrick</h1>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Grupo A</th>
+                <th>Grupo B</th>
+                <th>Grupo C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <!-- <div> ID: <input id="teamID_0" type="number" value="1455330" style="width: 6em;"> <button onclick="cargaEquipo(0)">Cargar</button> </div>
+    <div> Nombre: <a id="nombre_0"></a> </div>
+    <div> Escudo: <img id="escudo_0" src="" alt="" style="height:64px;"> </div>
+    <div> Estadio: <p id="estadio_0"></p> </div>
+    <div> Ranking: <p id="ranking_0"></p> </div> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Escudo</th>
+                <th>Nombre</th>
+                <th>Ranking</th>
+                <th>Estadio</th>
+                <th>Próximo Partido</th>
+                <th>Último Partido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input id="teamID_0" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_0" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_0"></a></td>
+                <td><p id="ranking_0"></p></td>
+                <td><p id="estadio_0"></p></td>
+                <td><p id="proxpartido_0"></p></td>
+                <td><p id="antepartido_0"></p></td>
+        </tr>
+            <tr>
+                <td><input id="teamID_1" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_1" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_1"></a></td>
+                <td><p id="ranking_1"></p></td>
+                <td><p id="estadio_1"></p></td>
+                <td><p id="proxpartido_1"></p></td>
+                <td><p id="antepartido_1"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_2" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_2" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_2"></a></td>
+                <td><p id="ranking_2"></p></td>
+                <td><p id="estadio_2"></p></td>
+                <td><p id="proxpartido_2"></p></td>
+                <td><p id="antepartido_2"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_3" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_3" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_3"></a></td>
+                <td><p id="ranking_3"></p></td>
+                <td><p id="estadio_3"></p></td>
+                <td><p id="proxpartido_3"></p></td>
+                <td><p id="antepartido_3"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_4" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_4" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_4"></a></td>
+                <td><p id="ranking_4"></p></td>
+                <td><p id="estadio_4"></p></td>
+                <td><p id="proxpartido_4"></p></td>
+                <td><p id="antepartido_4"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_5" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_5" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_5"></a></td>
+                <td><p id="ranking_5"></p></td>
+                <td><p id="estadio_5"></p></td>
+                <td><p id="proxpartido_5"></p></td>
+                <td><p id="antepartido_5"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_6" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_6" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_6"></a></td>
+                <td><p id="ranking_6"></p></td>
+                <td><p id="estadio_6"></p></td>
+                <td><p id="proxpartido_6"></p></td>
+                <td><p id="antepartido_6"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_7" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_7" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_7"></a></td>
+                <td><p id="ranking_7"></p></td>
+                <td><p id="estadio_7"></p></td>
+                <td><p id="proxpartido_7"></p></td>
+                <td><p id="antepartido_7"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_8" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_8" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_8"></a></td>
+                <td><p id="ranking_8"></p></td>
+                <td><p id="estadio_8"></p></td>
+                <td><p id="proxpartido_8"></p></td>
+                <td><p id="antepartido_8"></p></td>
+            </tr>
+            <tr>
+                <td><input id="teamID_9" type="number" value="1455330" style="width: 6em;"></td>
+                <td><img id="escudo_9" src="" alt="" style="height:64px;"></td>
+                <td><a id="nombre_9"></a></td>
+                <td><p id="ranking_9"></p></td>
+                <td><p id="estadio_9"></p></td>
+                <td><p id="proxpartido_9"></p></td>
+                <td><p id="antepartido_9"></p></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+<script>
+    // cargamos los equipos de la tabla... esto debería hacer con un for each en el html y tal...
+    // Hakuna FC España (1455330)
+    // Tottenham Toledo (1436780)
+    // Nets Brooklyn NY Toledo (779524)
+    // Triton Imperial (491218)
+    // C.P. Amanecer (774953)
+    // Jamurrillos FC (124382)
+    // Union Deportiva Almeriense 2020 (993938)
+    // FC AroNico (1593360)
+    // Danwikis (1432060)
+    // Danwikis (1432060)
+    // Bordados Catole (47541)
+    // Carabao 1990 F.C. (308879)
+    // var teamIDs = [779524];
+    var teamIDs = [1455330, 1436780, 779524, 491218, 774953, 124382, 993938, 1593360, 1432060, 988128];//, 47541, 308879];
+    for(var i=0; i<teamIDs.length; i++){ document.getElementById("teamID_"+i).value = teamIDs[i]; cargaEquipo(i); }
+
+    function getNombre(docuweb) {
+        return docuweb.getElementsByClassName("teamNameTitle")[0].childNodes[0].textContent.trim();
+    }
+
+    function getEscudo(docuweb) {
+        var escudo;
+        if (docuweb.getElementsByClassName("teamLogo")[0].children[0].tagName == "IMG"){ // bot
+            escudo = docuweb.getElementsByClassName("teamLogo")[0].children[0].src;
+            escudo = escudo.substring(escudo.lastIndexOf("http"),escudo.length);
+        }else if (docuweb.getElementsByClassName("teamLogo")[0].children[0].tagName == "A"){ // no bott
+            escudo = docuweb.getElementsByClassName("teamLogo")[0].children[0].href;
+        }
+        return escudo;
+    }
+
+    function getRanking(docuweb) {
+        var hijo = docuweb.getElementsByClassName("teamInfo")[0].children.length-4; //7 si no bot, 8 si bot
+        var ranking = docuweb.getElementsByClassName("teamInfo")[0].children[hijo].textContent;
+        var posRank = ranking.lastIndexOf("#")+1;
+        if (posRank == 0) {
+            return "El equipo está jugando un partido"
+        } else {
+            return (ranking.substring(posRank,ranking.length)).replace(" ","."); //ese espacio " " es especial
+        }
+    }
+
+    function getEstadio(docuweb) {
+        var hijo = docuweb.getElementsByClassName("teamInfo")[0].children.length-5; //6 si no bot, 7 si bot
+        var estadio = docuweb.getElementsByClassName("teamInfo")[0].children[hijo].childNodes[1].textContent;
+        var capacidad = docuweb.getElementsByClassName("teamInfo")[0].children[hijo].childNodes[2].textContent;
+        return estadio + "<br>" + capacidad;
+    }
+
+    function getPartidos(docuweb) {
+        var arrayProxPartidos = []; //de más cercano [0], a más futuro
+        var arrayAntePartidos = []; //de más reciente [0], a más antiguo
+        var listaPartidos = docuweb.getElementsByClassName("no-match-statement");
+        for (var i=0; i < listaPartidos.length; i++) {
+            var contrincantes = listaPartidos[i].children[0].title;
+            var resultado = "";
+            if (listaPartidos[i].parentElement.nextElementSibling.children.length != 0) resultado = listaPartidos[i].parentElement.nextElementSibling.children[0].children[0].textContent;
+            var tipo = listaPartidos[i].parentElement.previousElementSibling.children[0].title; // tipo de partido (amistoso, liga, torneo...)
+            var URL = 'https://www.hattrick.org/' + listaPartidos[i].children[0].getAttribute('href'); //enlace, a prueba de CORS y mierdas
+            URL = URL.substring(0,URL.indexOf('&'));
+            //provar lo de update view report = true
+            if (tipo == "") tipo = listaPartidos[i].parentElement.previousElementSibling.children[0].children[0].title; 
+            var fecha = listaPartidos[i].parentElement.previousElementSibling.previousElementSibling.textContent.trim(); // fecha con formato:
+
+            if (resultado == ""){
+                arrayProxPartidos.push([contrincantes, resultado, tipo, fecha, URL]); //el resultado va a ser siempre ""
+            }else{
+                arrayAntePartidos.push([contrincantes, resultado, tipo, fecha, URL]);
+            }
+        }
+        // console.log(arrayProxPartidos);
+        // console.log(arrayAntePartidos);
+        return [arrayProxPartidos, arrayAntePartidos];
+    }
+
+    function getProxPartidoAmistoso(docuweb) {
+        var arrayProxPartidos = getPartidos(docuweb)[0]
+        for(var i = 0; i < arrayProxPartidos.length; i++){
+            // console.log(arrayProxPartidos[i][2]);
+            // console.log(arrayProxPartidos[i][2].substring(0,8));
+            if (arrayProxPartidos[i][2].substring(0,8) == "Amistoso"){
+                return arrayProxPartidos[i];
+            }
+        }
+        // return getPartidos(docuweb)[0][0][0]; //proximo partido (liga, amistoso, torneo o lo que sea)
+    }
+    
+    function getAntePartidoAmistoso(docuweb) {
+        var arrayAntePartidos = getPartidos(docuweb)[1]
+        for(var i = 0; i < arrayAntePartidos.length; i++){
+            // console.log(arrayAntePartidos[i][2]);
+            // console.log(arrayAntePartidos[i][2].substring(0,8));
+            if (arrayAntePartidos[i][2].substring(0,8) == "Amistoso"){
+                return arrayAntePartidos[i];
+            }
+        }
+        // return getPartidos(docuweb)[1][0][0] + " ("+getPartidos(docuweb)[1][0][1]+")" ; //ultimo partido (liga, amistoso, torneo o lo que sea)
+    }
+
+    //una especie de Carrusel Deportivo con todos los partidos, pero no funciona
+    //  var caruselURL = 'https://www.hattrick.org/es/Club/Matches/Match.aspx?matchID=668862963'+
+    // //  +'&SourceSystem=Hattrick&TeamId=491218&UpdateViewedReport=True'+
+    //  +'&BrowseIds=668562497,665246103,668649368,665246108,668736801,665246110,668774761,665246114,668862963,665246120,665246123,665246129,665246133';
+
+function cargaEquipo(fila) {
+    // getting url source code
+    var theURL = "https://www.hattrick.org/es/Club/?TeamID=" + document.getElementById("teamID_"+fila).value
+    // console.log(theURL)
+    var url="https://cors-anywhere.herokuapp.com/"+theURL, xhr;//Remember, same domain
+    // var url=theURL, xhr;//Remember, same domain
+    if("XMLHttpRequest" in window) xhr=new XMLHttpRequest();
+    if("ActiveXObject" in window) xhr=new ActiveXObject("Msxml2.XMLHTTP");
+    // console.log(xhr)
+    // xhr.onreadystatechange = function() {
+    //     if(xhr.readyState==4)
+    //     alert("loaded");
+    // }
+    xhr.open('GET',url,true);
+    // xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    // xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+    // // xhr.setRequestHeader('Content-type', 'application/ecmascript');
+    // xhr.setRequestHeader('Access-Control-Expose-Headers', '*');
+    // xhr.setRequestHeader('Access-Control-Allow-Methods', '*');
+
+    xhr.responseType = 'document';
+    xhr.send();
+    xhr.onload = function() {
+        var docuweb = this.response;
+        document.getElementById("nombre_"+fila).textContent = getNombre(docuweb);
+        document.getElementById("nombre_"+fila).href = theURL;
+        document.getElementById("escudo_"+fila).src = getEscudo(docuweb);
+        document.getElementById("ranking_"+fila).textContent = getRanking(docuweb);
+        document.getElementById("estadio_"+fila).innerHTML = getEstadio(docuweb);
+        cargaPartidos(fila);
+    }
+}
+
+function cargaPartidos(fila) {
+    // getting url source code
+    var theURL = "https://www.hattrick.org/es/Club/Matches/?TeamID=" + document.getElementById("teamID_"+fila).value
+    // console.log(theURL)
+    var url="https://cors-anywhere.herokuapp.com/"+theURL, xhr;//Remember, same domain
+    if("XMLHttpRequest" in window) xhr=new XMLHttpRequest();
+    if("ActiveXObject" in window) xhr=new ActiveXObject("Msxml2.XMLHTTP");
+    // console.log(xhr)
+    // xhr.onreadystatechange = function() {
+    //     if(xhr.readyState==4)
+    //     alert("loaded");
+    // }
+    xhr.open('GET',url,true); // xhr.open('GET',url,true);
+    xhr.responseType = 'document';
+    xhr.send();
+    xhr.onload = function() {
+        var docuweb = this.response;
+        document.getElementById("proxpartido_"+fila).innerHTML = getProxPartidoAmistoso(docuweb)[3] + ' --- ' + getProxPartidoAmistoso(docuweb)[2]; //fecha y tipo
+        document.getElementById("proxpartido_"+fila).innerHTML += '<br><a href=' + getProxPartidoAmistoso(docuweb)[4] + '>' + getProxPartidoAmistoso(docuweb)[0] + '</a>'; //enlace y contrincantes
+        
+        document.getElementById("antepartido_"+fila).innerHTML = getAntePartidoAmistoso(docuweb)[3] + ' --- ' + getAntePartidoAmistoso(docuweb)[2]; //fecha y tipo
+        document.getElementById("antepartido_"+fila).innerHTML += '<br><a href=' + getAntePartidoAmistoso(docuweb)[4] + '>' + getAntePartidoAmistoso(docuweb)[0] + '</a>'; //enlace y contrincantes
+        document.getElementById("antepartido_"+fila).innerHTML += '<br>' + getAntePartidoAmistoso(docuweb)[1]; // resultado
+    }
+}
+</script>
+
+</html>
