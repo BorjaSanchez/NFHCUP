@@ -4,7 +4,7 @@
 <head>
     <title>Hattrick</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="refresh" content="180">
+    <!-- <meta http-equiv="refresh" content="180"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -15,28 +15,32 @@
         }
 
         thead {
+            font-size: large;
             text-align: center;
             vertical-align: middle; /*parece que no funciona si hay br*/
             background: gray;
-        }
-
-        .grupo {
-            text-align: center;
-            background: lightgray"
         }
 
         body{
             font-size: small;
         }
 
-        .escudo {
-            height: 76px;
+        .grupo {
+            font-size: large;
             text-align: center;
+            background: lightgray;
         }
 
+        .escudo {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /*
         .ranking {
             text-align: right;
         }
+        */
     </style>
 
 </head>
@@ -49,9 +53,9 @@
         <thead>
             <tr>
                 <th>Escudo</th>
-                <th>Nombre, ID,<br>división, región</th>
-                <th>Ranking</th>
-                <th>Estadio</th>
+                <th>Nombre (ID)<br>división // ranking</th>
+                <!-- <th>Ranking</th> -->
+                <th>Estadio, región</th>
                 <th>Próximo Partido<br>AMISTOSO</th>
                 <th>Último Partido<br>AMISTOSO</th>
                 <th>Próximo Partido<br>LIGA</th>
@@ -60,225 +64,243 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="8" class="grupo">GRUPO A</td>
+                <td colspan="7" class="grupo">GRUPO A</td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_0" class="escudo"></td>
+                <td class="escudo"><img id="escudo_0" style="height: 76px;"></td>
                 <td><a id="nombre_0"></a><br>
                     (<span id="teamID_0"></span>)<br>
-                    <span id="division_0"></span></td>
-                <td class="ranking"><span id="ranking_0"></span></td>
-                <td><span id="estadio_0"></span></td>
+                    <span id="division_0"></span> // <span id="ranking_0"></span></td>
+                <!-- <td class="ranking"><span id="ranking_0"></span></td> -->
+                <td><span id="estadio_0"></span><br>
+                    <span id="region_0"></span></td>
                 <td><span id="proxpartidoAmistoso_0"></span></td>
                 <td><span id="antepartidoAmistoso_0"></span></td>
                 <td><span id="proxpartidoLiga_0"></span></td>
                 <td><span id="antepartidoLiga_0"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_1" class="escudo"></td>
+                <td class="escudo"><img id="escudo_1" style="height: 76px;"></td>
                 <td><a id="nombre_1"></a><br>
                     (<span id="teamID_1"></span>)<br>
-                    <span id="division_1"></span></td>
-                <td class="ranking"><span id="ranking_1"></span></td>
-                <td><span id="estadio_1"></span></td>
+                    <span id="division_1"></span> // <span id="ranking_1"></span></td>
+                <!-- <td class="ranking"><span id="ranking_1"></span></td> -->
+                <td><span id="estadio_1"></span><br>
+                    <span id="region_1"></span></td>
                 <td><span id="proxpartidoAmistoso_1"></span></td>
                 <td><span id="antepartidoAmistoso_1"></span></td>
                 <td><span id="proxpartidoLiga_1"></span></td>
                 <td><span id="antepartidoLiga_1"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_2" class="escudo"></td>
+                <td class="escudo"><img id="escudo_2" style="height: 76px;"></td>
                 <td><a id="nombre_2"></a><br>
                     (<span id="teamID_2"></span>)<br>
-                    <span id="division_2"></span></td>
-                <td class="ranking"><span id="ranking_2"></span></td>
-                <td><span id="estadio_2"></span></td>
+                    <span id="division_2"></span> // <span id="ranking_2"></span></td>
+                <!-- <td class="ranking"><span id="ranking_2"></span></td> -->
+                <td><span id="estadio_2"></span><br>
+                    <span id="region_2"></span></td>
                 <td><span id="proxpartidoAmistoso_2"></span></td>
                 <td><span id="antepartidoAmistoso_2"></span></td>
                 <td><span id="proxpartidoLiga_2"></span></td>
                 <td><span id="antepartidoLiga_2"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_3" class="escudo"></td>
+                <td class="escudo"><img id="escudo_3" style="height: 76px;"></td>
                 <td><a id="nombre_3"></a><br>
                     (<span id="teamID_3"></span>)<br>
-                    <span id="division_3"></span></td>
-                <td class="ranking"><span id="ranking_3"></span></td>
-                <td><span id="estadio_3"></span></td>
+                    <span id="division_3"></span> // <span id="ranking_3"></span></td>
+                <!-- <td class="ranking"><span id="ranking_3"></span></td> -->
+                <td><span id="estadio_3"></span><br>
+                    <span id="region_3"></span></td>
                 <td><span id="proxpartidoAmistoso_3"></span></td>
                 <td><span id="antepartidoAmistoso_3"></span></td>
                 <td><span id="proxpartidoLiga_3"></span></td>
                 <td><span id="antepartidoLiga_3"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_4" class="escudo"></td>
+                <td class="escudo"><img id="escudo_4" style="height: 76px;"></td>
                 <td><a id="nombre_4"></a><br>
                     (<span id="teamID_4"></span>)<br>
-                    <span id="division_4"></span></td>
-                <td class="ranking"><span id="ranking_4"></span></td>
-                <td><span id="estadio_4"></span></td>
+                    <span id="division_4"></span> // <span id="ranking_4"></span></td>
+                <!-- <td class="ranking"><span id="ranking_4"></span></td> -->
+                <td><span id="estadio_4"></span><br>
+                    <span id="region_4"></span></td>
                 <td><span id="proxpartidoAmistoso_4"></span></td>
                 <td><span id="antepartidoAmistoso_4"></span></td>
                 <td><span id="proxpartidoLiga_4"></span></td>
                 <td><span id="antepartidoLiga_4"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_5" class="escudo"></td>
+                <td class="escudo"><img id="escudo_5" style="height: 76px;"></td>
                 <td><a id="nombre_5"></a><br>
                     (<span id="teamID_5"></span>)<br>
-                    <span id="division_5"></span></td>
-                <td class="ranking"><span id="ranking_5"></span></td>
-                <td><span id="estadio_5"></span></td>
+                    <span id="division_5"></span> // <span id="ranking_5"></span></td>
+                <!-- <td class="ranking"><span id="ranking_5"></span></td> -->
+                <td><span id="estadio_5"></span><br>
+                    <span id="region_5"></span></td>
                 <td><span id="proxpartidoAmistoso_5"></span></td>
                 <td><span id="antepartidoAmistoso_5"></span></td>
                 <td><span id="proxpartidoLiga_5"></span></td>
                 <td><span id="antepartidoLiga_5"></span></td>
             </tr>
             <tr>
-                <td colspan="8" class="grupo">GRUPO B</td>
+                <td colspan="7" class="grupo">GRUPO B</td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_6" class="escudo"></td>
+                <td class="escudo"><img id="escudo_6" style="height: 76px;"></td>
                 <td><a id="nombre_6"></a><br>
                     (<span id="teamID_6"></span>)<br>
-                    <span id="division_6"></span></td>
-                <td class="ranking"><span id="ranking_6"></span></td>
-                <td><span id="estadio_6"></span></td>
+                    <span id="division_6"></span> // <span id="ranking_6"></span></td>
+                <!-- <td class="ranking"><span id="ranking_6"></span></td> -->
+                <td><span id="estadio_6"></span><br>
+                    <span id="region_6"></span></td>
                 <td><span id="proxpartidoAmistoso_6"></span></td>
                 <td><span id="antepartidoAmistoso_6"></span></td>
                 <td><span id="proxpartidoLiga_6"></span></td>
                 <td><span id="antepartidoLiga_6"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_7" class="escudo"></td>
+                <td class="escudo"><img id="escudo_7" style="height: 76px;"></td>
                 <td><a id="nombre_7"></a><br>
                     (<span id="teamID_7"></span>)<br>
-                    <span id="division_7"></span></td>
-                <td class="ranking"><span id="ranking_7"></span></td>
-                <td><span id="estadio_7"></span></td>
+                    <span id="division_7"></span> // <span id="ranking_7"></span></td>
+                <!-- <td class="ranking"><span id="ranking_7"></span></td> -->
+                <td><span id="estadio_7"></span><br>
+                    <span id="region_7"></span></td>
                 <td><span id="proxpartidoAmistoso_7"></span></td>
                 <td><span id="antepartidoAmistoso_7"></span></td>
                 <td><span id="proxpartidoLiga_7"></span></td>
                 <td><span id="antepartidoLiga_7"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_8" class="escudo"></td>
+                <td class="escudo"><img id="escudo_8" style="height: 76px;"></td>
                 <td><a id="nombre_8"></a><br>
                     (<span id="teamID_8"></span>)<br>
-                    <span id="division_8"></span></td>
-                <td class="ranking"><span id="ranking_8"></span></td>
-                <td><span id="estadio_8"></span></td>
+                    <span id="division_8"></span> // <span id="ranking_8"></span></td>
+                <!-- <td class="ranking"><span id="ranking_8"></span></td> -->
+                <td><span id="estadio_8"></span><br>
+                    <span id="region_8"></span></td>
                 <td><span id="proxpartidoAmistoso_8"></span></td>
                 <td><span id="antepartidoAmistoso_8"></span></td>
                 <td><span id="proxpartidoLiga_8"></span></td>
                 <td><span id="antepartidoLiga_8"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_9" class="escudo"></td>
+                <td class="escudo"><img id="escudo_9" style="height: 76px;"></td>
                 <td><a id="nombre_9"></a><br>
                     (<span id="teamID_9"></span>)<br>
-                    <span id="division_9"></span></td>
-                <td class="ranking"><span id="ranking_9"></span></td>
-                <td><span id="estadio_9"></span></td>
+                    <span id="division_9"></span> // <span id="ranking_9"></span></td>
+                <!-- <td class="ranking"><span id="ranking_9"></span></td> -->
+                <td><span id="estadio_9"></span><br>
+                    <span id="region_9"></span></td>
                 <td><span id="proxpartidoAmistoso_9"></span></td>
                 <td><span id="antepartidoAmistoso_9"></span></td>
                 <td><span id="proxpartidoLiga_9"></span></td>
                 <td><span id="antepartidoLiga_9"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_10" class="escudo"></td>
+                <td class="escudo"><img id="escudo_10" style="height: 76px;"></td>
                 <td><a id="nombre_10"></a><br>
                     (<span id="teamID_10"></span>)<br>
-                    <span id="division_10"></span></td>
-                <td class="ranking"><span id="ranking_10"></span></td>
-                <td><span id="estadio_10"></span></td>
+                    <span id="division_10"></span> // <span id="ranking_10"></span></td>
+                <!-- <td class="ranking"><span id="ranking_10"></span></td> -->
+                <td><span id="estadio_10"></span><br>
+                    <span id="region_10"></span></td>
                 <td><span id="proxpartidoAmistoso_10"></span></td>
                 <td><span id="antepartidoAmistoso_10"></span></td>
                 <td><span id="proxpartidoLiga_10"></span></td>
                 <td><span id="antepartidoLiga_10"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_11" class="escudo"></td>
+                <td class="escudo"><img id="escudo_11" style="height: 76px;"></td>
                 <td><a id="nombre_11"></a><br>
                     (<span id="teamID_11"></span>)<br>
-                    <span id="division_11"></span></td>
-                <td class="ranking"><span id="ranking_11"></span></td>
-                <td><span id="estadio_11"></span></td>
+                    <span id="division_11"></span> // <span id="ranking_11"></span></td>
+                <!-- <td class="ranking"><span id="ranking_11"></span></td> -->
+                <td><span id="estadio_11"></span><br>
+                    <span id="region_11"></span></td>
                 <td><span id="proxpartidoAmistoso_11"></span></td>
                 <td><span id="antepartidoAmistoso_11"></span></td>
                 <td><span id="proxpartidoLiga_11"></span></td>
                 <td><span id="antepartidoLiga_11"></span></td>
             </tr>
             <tr>
-                <td colspan="8" class="grupo">GRUPO C</td>
+                <td colspan="7" class="grupo">GRUPO C</td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_12" class="escudo"></td>
+                <td class="escudo"><img id="escudo_12" style="height: 76px;"></td>
                 <td><a id="nombre_12"></a><br>
                     (<span id="teamID_12"></span>)<br>
-                    <span id="division_12"></span></td>
-                <td class="ranking"><span id="ranking_12"></span></td>
-                <td><span id="estadio_12"></span></td>
+                    <span id="division_12"></span> // <span id="ranking_12"></span></td>
+                <!-- <td class="ranking"><span id="ranking_12"></span></td> -->
+                <td><span id="estadio_12"></span><br>
+                    <span id="region_12"></span></td>
                 <td><span id="proxpartidoAmistoso_12"></span></td>
                 <td><span id="antepartidoAmistoso_12"></span></td>
                 <td><span id="proxpartidoLiga_12"></span></td>
                 <td><span id="antepartidoLiga_12"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_13" class="escudo"></td>
+                <td class="escudo"><img id="escudo_13" style="height: 76px;"></td>
                 <td><a id="nombre_13"></a><br>
                     (<span id="teamID_13"></span>)<br>
-                    <span id="division_13"></span></td>
-                <td class="ranking"><span id="ranking_13"></span></td>
-                <td><span id="estadio_13"></span></td>
+                    <span id="division_13"></span> // <span id="ranking_13"></span></td>
+                <!-- <td class="ranking"><span id="ranking_13"></span></td> -->
+                <td><span id="estadio_13"></span><br>
+                    <span id="region_13"></span></td>
                 <td><span id="proxpartidoAmistoso_13"></span></td>
                 <td><span id="antepartidoAmistoso_13"></span></td>
                 <td><span id="proxpartidoLiga_13"></span></td>
                 <td><span id="antepartidoLiga_13"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_14" class="escudo"></td>
+                <td class="escudo"><img id="escudo_14" style="height: 76px;"></td>
                 <td><a id="nombre_14"></a><br>
                     (<span id="teamID_14"></span>)<br>
-                    <span id="division_14"></span></td>
-                <td class="ranking"><span id="ranking_14"></span></td>
-                <td><span id="estadio_14"></span></td>
+                    <span id="division_14"></span> // <span id="ranking_14"></span></td>
+                <!-- <td class="ranking"><span id="ranking_14"></span></td> -->
+                <td><span id="estadio_14"></span><br>
+                    <span id="region_14"></span></td>
                 <td><span id="proxpartidoAmistoso_14"></span></td>
                 <td><span id="antepartidoAmistoso_14"></span></td>
                 <td><span id="proxpartidoLiga_14"></span></td>
                 <td><span id="antepartidoLiga_14"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_15" class="escudo"></td>
+                <td class="escudo"><img id="escudo_15" style="height: 76px;"></td>
                 <td><a id="nombre_15"></a><br>
                     (<span id="teamID_15"></span>)<br>
-                    <span id="division_15"></span></td>
-                <td class="ranking"><span id="ranking_15"></span></td>
-                <td><span id="estadio_15"></span></td>
+                    <span id="division_15"></span> // <span id="ranking_15"></span></td>
+                <!-- <td class="ranking"><span id="ranking_15"></span></td> -->
+                <td><span id="estadio_15"></span><br>
+                    <span id="region_15"></span></td>
                 <td><span id="proxpartidoAmistoso_15"></span></td>
                 <td><span id="antepartidoAmistoso_15"></span></td>
                 <td><span id="proxpartidoLiga_15"></span></td>
                 <td><span id="antepartidoLiga_15"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_16" class="escudo"></td>
+                <td class="escudo"><img id="escudo_16" style="height: 76px;"></td>
                 <td><a id="nombre_16"></a><br>
                     (<span id="teamID_16"></span>)<br>
-                    <span id="division_16"></span></td>
-                <td class="ranking"><span id="ranking_16"></span></td>
-                <td><span id="estadio_16"></span></td>
+                    <span id="division_16"></span> // <span id="ranking_16"></span></td>
+                <!-- <td class="ranking"><span id="ranking_16"></span></td> -->
+                <td><span id="estadio_16"></span><br>
+                    <span id="region_16"></span></td>
                 <td><span id="proxpartidoAmistoso_16"></span></td>
                 <td><span id="antepartidoAmistoso_16"></span></td>
                 <td><span id="proxpartidoLiga_16"></span></td>
                 <td><span id="antepartidoLiga_16"></span></td>
             </tr>
             <tr>
-                <td class="escudo"><img id="escudo_17" class="escudo"></td>
+                <td class="escudo"><img id="escudo_17" style="height: 76px;"></td>
                 <td><a id="nombre_17"></a><br>
                     (<span id="teamID_17"></span>)<br>
-                    <span id="division_17"></span></td>
-                <td class="ranking"><span id="ranking_17"></span></td>
-                <td><span id="estadio_17"></span></td>
+                    <span id="division_17"></span> // <span id="ranking_17"></span></td>
+                <!-- <td class="ranking"><span id="ranking_17"></span></td> -->
+                <td><span id="estadio_17"></span><br>
+                    <span id="region_17"></span></td>
                 <td><span id="proxpartidoAmistoso_17"></span></td>
                 <td><span id="antepartidoAmistoso_17"></span></td>
                 <td><span id="proxpartidoLiga_17"></span></td>
@@ -366,10 +388,14 @@
         // var bandera_alt = docuweb.getElementsByClassName("teamNameTitle")[0].children[0].children[0].alt;
         // var bandera_title = docuweb.getElementsByClassName("teamNameTitle")[0].children[0].children[0].title;
         // var bandera = '<img src="' + bandera_src + '" style="' + bandera_style + '" alt="' + bandera_alt + '" title="' + bandera_title + '"></img>'
-        var region = docuweb.getElementsByClassName("byline")[0].children[0].title.trim();
+        // var region = docuweb.getElementsByClassName("byline")[0].children[0].title.trim();
         var division = docuweb.getElementsByClassName("byline")[0].children[1].textContent.trim();
-        return division + '<br>(' + region + ')';
+        return division;// + '<br>(' + region + ')';
         // return bandera + ' ' + division + ' (' + region + ')'; // bandera no funsionaaa
+    }
+
+    function getRegion(docuweb) {
+        return docuweb.getElementsByClassName("byline")[0].children[0].title.trim();
     }
 
     function getEscudo(docuweb) {
@@ -480,6 +506,7 @@ function cargaEquipo(fila) {
         document.getElementById("ranking_"+fila).textContent = getRanking(docuweb);
         document.getElementById("estadio_"+fila).innerHTML = getEstadio(docuweb);
         document.getElementById("division_"+fila).innerHTML = getDivision(docuweb);
+        document.getElementById("region_"+fila).innerHTML = getRegion(docuweb);
         cargaPartidos(fila);
     }
 }
